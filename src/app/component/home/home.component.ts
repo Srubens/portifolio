@@ -57,8 +57,7 @@ export class HomeComponent implements OnInit {
   ];
 
   about:any = {
-    texto:`Olá meu nome é Rubens sou desenvolvedor Front End. Sou entusiasta em programação, sempre busco explorar novas formas de aprender e crescer.
-    Estou animado para explorar o futuro, fica de olho que logo mais estarei colocando novidades por aqui. Sinta-se à vontade para entrar em contato nos links abaixo.`
+    texto:`Olá meu nome é Rubens sou desenvolvedor Front End. Sou entusiasta em programação, sempre busco explorar novas formas de aprender e crescer. Estou animado para explorar o futuro, fica de olho que logo mais estarei colocando novidades por aqui. Sinta-se à vontade para entrar em contato nos links abaixo.`
   }
 
   constructor() {}
