@@ -1,0 +1,13 @@
+.main_header{
+    background: #171717;
+    color:#fff;
+}
+
+.navbar{
+    background: #171717;
+}
+
+.navbar-brand,
+.navbar-nav li a{
+    color:#00DF5E;
+}

@@ -1,0 +1,151 @@
+
+.main_home{
+    background: #171717;
+    color:#fff;
+}
+
+.main_hero {
+    overflow: hidden; /* Para esconder partes do conteúdo que se movem para fora da área */
+    position: relative;
+    height: 100vh; /* Define a altura como 100% da altura da tela */
+}
+
+.d-flex {
+    position: relative;
+}
+
+.hero_text,
+.hero_image {
+    opacity: 0;
+    transform: translateX(0); /* Inicia na posição inicial */
+}
+
+.hero_text {
+    order: 1; /* Muda a ordem para aparecer primeiro na versão flex-column */
+    animation: fadeInLeft 1s ease forwards; /* Aplica a animação de fadeInRight durante 1 segundo */
+}
+
+.hero_image {
+    order: 2; /* Muda a ordem para aparecer depois na versão flex-column */
+    animation: fadeInRight 1s ease forwards; /* Aplica a animação de fadeInLeft durante 1 segundo */
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%); /* Move para fora da tela à direita */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); /* Move para a posição inicial */
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%); /* Move para fora da tela à esquerda */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); /* Move para a posição inicial */
+    }
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.hero_image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.main_hero,
+.main_about,
+.main_projects,
+.main_skills{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero_image{
+    width: 350px;
+    height: auto;
+}
+
+.projects_img img{
+    max-width: 100%;
+    width: 360px;
+}
+
+.my_icon{
+    background: #212121;
+    border-radius: 3rem;
+    width: 62px;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.my_icon i{
+    font-size: 32px;
+    color:#00DF5E;
+}
+
+.icon-skill{
+    width: 130px;
+    height: 130px;
+    max-width: 100%;
+    background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-skill i{
+    font-size: 80px;
+    color:#00DF5E;
+}
+
+.btn-green{
+    background: #00DF5E;
+    color: #fff;
+}
+
+.btn-green:hover{
+    background: none;
+    border:1px solid #fff;
+    color: #00DF5E;
+}
+
+@media screen and (max-width:576px){
+    .main_hero,
+    .main_about,
+    .main_projects,
+    .main_skills{
+        height: 92vh;
+    }
+}
